@@ -3,3 +3,12 @@ echo "Welcome to Pipewire Clock Changer \n What clock/sample rate do you want to
 echo "\n 1: 44.1khz \n 2: 48khz \n 3: 96khz \n 4: 192khz"
 read option
 
+#Function that takes the option you pick
+setClock(){
+    arrayOfOptions=("44100" "48000" "96000" "192000") 
+    chosenSetting=${arrayOfOptions[$1-1]}
+
+    pw-metadata -n settings 0 clock.force-rate $chosenSetting
+}
+setClock $option
+echo "Done"
