@@ -1,5 +1,6 @@
 #!/bin/bash
-echo "Welcome to Pipewire Clock Changer \n What clock/sample rate do you want to set?"
+echo "Welcome to Pipewire Clock Changer"
+echo "What clock/sample rate do you want to set?"
 echo "1: 44.1khz"
 echo "2: 48khz"
 echo "3: 96khz"
